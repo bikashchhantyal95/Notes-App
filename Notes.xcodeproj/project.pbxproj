@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3744122A538ABC00DA875B /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3744112A538ABC00DA875B /* DatabaseHelper.swift */; };
 		DB26B28D2A40A43800946257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B28C2A40A43800946257 /* AppDelegate.swift */; };
 		DB26B28F2A40A43800946257 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B28E2A40A43800946257 /* SceneDelegate.swift */; };
 		DB26B2912A40A43800946257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B2902A40A43800946257 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3744112A538ABC00DA875B /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		DB26B2892A40A43800946257 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB26B28C2A40A43800946257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB26B28E2A40A43800946257 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				DB26B29A2A40A43900946257 /* LaunchScreen.storyboard */,
 				DB26B29D2A40A43900946257 /* Info.plist */,
 				DB26B2952A40A43800946257 /* Notes.xcdatamodeld */,
+				0D3744112A538ABC00DA875B /* DatabaseHelper.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB26B2912A40A43800946257 /* ViewController.swift in Sources */,
+				0D3744122A538ABC00DA875B /* DatabaseHelper.swift in Sources */,
 				DB26B28D2A40A43800946257 /* AppDelegate.swift in Sources */,
 				DB26B28F2A40A43800946257 /* SceneDelegate.swift in Sources */,
 				DB26B2972A40A43800946257 /* Notes.xcdatamodeld in Sources */,
