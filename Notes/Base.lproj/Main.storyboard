@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1kD-2Q-4Te" kind="show" identifier="details" id="sEa-vF-ceU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,6 +61,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Vu-T5-3XE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="194.6564885496183" y="-27.464788732394368"/>
+        </scene>
+        <!--Note Details View Controller-->
+        <scene sceneID="0gY-IJ-RRw">
+            <objects>
+                <viewController id="1kD-2Q-4Te" customClass="NoteDetailsViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TfB-1G-fsK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYs-uB-Kte">
+                                <rect key="frame" x="20" y="153" width="353" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H62-HY-cpf">
+                                <rect key="frame" x="20" y="185" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb9-OM-VEK">
+                                <rect key="frame" x="20" y="226" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lnW-55-NdJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EYs-uB-Kte" firstAttribute="centerX" secondItem="TfB-1G-fsK" secondAttribute="centerX" id="32L-Rk-vNR"/>
+                            <constraint firstItem="lnW-55-NdJ" firstAttribute="trailing" secondItem="H62-HY-cpf" secondAttribute="trailing" constant="20" id="9Bf-r8-Jgb"/>
+                            <constraint firstItem="lnW-55-NdJ" firstAttribute="trailing" secondItem="EYs-uB-Kte" secondAttribute="trailing" constant="20" id="Ati-u7-vAW"/>
+                            <constraint firstItem="EYs-uB-Kte" firstAttribute="leading" secondItem="lnW-55-NdJ" secondAttribute="leading" constant="20" id="RIX-7K-5HF"/>
+                            <constraint firstItem="lnW-55-NdJ" firstAttribute="trailing" secondItem="Jb9-OM-VEK" secondAttribute="trailing" constant="20" id="fMx-dg-rKt"/>
+                            <constraint firstItem="H62-HY-cpf" firstAttribute="leading" secondItem="lnW-55-NdJ" secondAttribute="leading" constant="20" id="gm4-zq-2dR"/>
+                            <constraint firstItem="EYs-uB-Kte" firstAttribute="top" secondItem="lnW-55-NdJ" secondAttribute="top" constant="50" id="hdZ-xB-oEe"/>
+                            <constraint firstItem="Jb9-OM-VEK" firstAttribute="leading" secondItem="lnW-55-NdJ" secondAttribute="leading" constant="20" id="m8v-0G-ySx"/>
+                            <constraint firstItem="H62-HY-cpf" firstAttribute="top" secondItem="EYs-uB-Kte" secondAttribute="bottom" constant="8" symbolic="YES" id="qTq-pt-ugS"/>
+                            <constraint firstItem="Jb9-OM-VEK" firstAttribute="top" secondItem="H62-HY-cpf" secondAttribute="bottom" constant="20" id="x06-mR-6xx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VPk-Jq-NkX">
+                        <connections>
+                            <outlet property="titleView" destination="TfB-1G-fsK" id="8iB-KO-pbo"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteDescriptionLabel" destination="Jb9-OM-VEK" id="z3I-2L-6XP"/>
+                        <outlet property="noteTimeStampLabel" destination="H62-HY-cpf" id="V0c-g8-2wI"/>
+                        <outlet property="noteUITitle" destination="EYs-uB-Kte" id="4ye-Zm-bwd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLe-u8-wqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="645"/>
         </scene>
         <!--Create Note-->
         <scene sceneID="itZ-i5-fic">
