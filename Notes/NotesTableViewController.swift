@@ -123,12 +123,11 @@ class NotesTableViewController: UITableViewController {
                     let destinationView = segue.destination as! NoteDetailsViewController
                     let currentRow = tableView.indexPathForSelectedRow!
                     let index = currentRow.row
-            destinationView.note = Note(title: notes[index].title!, content: notes[index].description, timestamp: notes[index].timestamp!)
+            destinationView.note = Note(title: notes[index].title!, content: notes[index].content!, timestamp: notes[index].timestamp!)
                 
-                case "Add":
+                case "add":
                     let destinationView = segue.destination as! NoteCreateVC
-                    
-                    
+                            
                 default:
                  preconditionFailure("Failure of indentify segue.")
                 }

@@ -60,6 +60,17 @@ class DatabaseHelper{
         }
     }
     
+    func updateNote(noteModel: Note, noteEntity: NotesEntity){
+        noteEntity.title = noteModel.title
+        noteEntity.content = noteModel.content
+        do{
+            try context.save()
+        }catch{
+            print("Failed to update note: \(error)")
+        }
+    }
+    
+    
 }
 
 

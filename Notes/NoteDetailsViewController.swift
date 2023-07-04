@@ -19,9 +19,13 @@ class NoteDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        overrideUserInterfaceStyle = .light
         
+      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         noteUITitle.text = note!.title
         noteDescriptionLabel.text = note!.content
         //format to string from date of timestamp from core data
@@ -32,8 +36,7 @@ class NoteDetailsViewController: UIViewController {
         let timestampString = formatter.string(from: note!.timestamp)
         noteTimeStampLabel.text = timestampString
     }
-    
-/*
+
     
     // MARK: - Navigation
 
@@ -41,10 +44,17 @@ class NoteDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        switch segue.identifier{
+                case "edit":
+                    let destinationView = segue.destination as! NoteCreateVC
+                    destinationView.note = note
         
-        
+                default:
+                 preconditionFailure("Failure of indentify segue.")
+                }
+   
     }
- */
+ 
     
 
 }

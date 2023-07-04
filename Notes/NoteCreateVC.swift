@@ -11,7 +11,12 @@ class NoteCreateVC: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
+    
+    
+    @IBOutlet weak var btnLabel: UIButton!
+    
     private let databaseHelper = DatabaseHelper()
+    var note: Note!
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
@@ -36,8 +41,14 @@ class NoteCreateVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+       
+        
         // Do any additional setup after loading the view.
+        if let note = note{
+            titleTextField.text = note.title
+            contentTextField.text = note.content
+        }
     }
     
 

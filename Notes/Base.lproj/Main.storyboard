@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1kD-2Q-4Te" kind="show" identifier="details" id="sEa-vF-ceU"/>
+                                    <segue destination="1kD-2Q-4Te" kind="showDetail" identifier="details" id="t0w-5V-iLy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +53,7 @@
                     <navigationItem key="navigationItem" id="8Ge-Zl-zQo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CS7-7B-F3c">
                             <connections>
-                                <segue destination="7AY-FC-Mgs" kind="show" id="ny9-FW-h1i"/>
+                                <segue destination="7AY-FC-Mgs" kind="show" identifier="add" id="dQ1-U4-rdo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -88,6 +88,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvL-O6-DIl">
+                                <rect key="frame" x="169" y="450" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <segue destination="7AY-FC-Mgs" kind="show" identifier="edit" id="ujb-An-eFi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lnW-55-NdJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,11 +113,13 @@
                             <constraint firstItem="Jb9-OM-VEK" firstAttribute="top" secondItem="H62-HY-cpf" secondAttribute="bottom" constant="20" id="x06-mR-6xx"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="VPk-Jq-NkX">
                         <connections>
                             <outlet property="titleView" destination="TfB-1G-fsK" id="8iB-KO-pbo"/>
                         </connections>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="noteDescriptionLabel" destination="Jb9-OM-VEK" id="z3I-2L-6XP"/>
                         <outlet property="noteTimeStampLabel" destination="H62-HY-cpf" id="V0c-g8-2wI"/>
@@ -117,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLe-u8-wqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637" y="645"/>
+            <point key="canvasLocation" x="195" y="727"/>
         </scene>
         <!--Create Note-->
         <scene sceneID="itZ-i5-fic">
@@ -184,6 +195,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create Note" id="0B0-5Q-B4N"/>
                     <connections>
+                        <outlet property="btnLabel" destination="qe9-Vf-i7r" id="xAa-Sh-Bpt"/>
                         <outlet property="contentTextField" destination="8fV-VO-uVL" id="1Xg-Yb-DoX"/>
                         <outlet property="titleTextField" destination="65Y-Qv-4Ki" id="mWc-kV-CCz"/>
                     </connections>
@@ -191,7 +203,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ik4-mN-s9S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="g8v-Ps-1zJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1084.7328244274809" y="-23.239436619718312"/>
+            <point key="canvasLocation" x="1083" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v1l-wd-ltY">
@@ -212,6 +224,9 @@
             <point key="canvasLocation" x="-732.06106870229007" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ujb-An-eFi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
