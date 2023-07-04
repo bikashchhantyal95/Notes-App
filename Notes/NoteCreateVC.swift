@@ -11,6 +11,28 @@ class NoteCreateVC: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextField!
+    private let databaseHelper = DatabaseHelper()
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        guard let title = titleTextField.text, !title.isEmpty else {
+            return
+        }
+        
+        guard let content = contentTextField.text, !content.isEmpty else {
+            return
+        }
+        
+        let newNote = Note(
+        title: title,
+        content: content,
+        timestamp: Date()
+        )
+        databaseHelper.addNote(note: newNote)
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

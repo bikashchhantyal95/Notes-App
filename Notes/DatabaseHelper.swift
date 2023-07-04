@@ -42,7 +42,22 @@ class DatabaseHelper{
         
         return notes
     }
+    
+    func deleteNote(noteEntity: NotesEntity){
+        context.delete(noteEntity)
+        do{
+            try context.save()
+        }catch{
+            print("Failed to delete note: \(error)")
+        }
+    }
+    
 }
+
+
+
+
+
 
 //a model class to easily pass arguements to the core data
 struct Note{
