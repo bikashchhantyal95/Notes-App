@@ -7,8 +7,23 @@
 
 import UIKit
 
+
+
 class NotesTableViewController: UITableViewController {
 
+    //initialize notesentity
+    private var notes: [NotesEntity] = []
+    
+    //instantiate databasehelper
+    var databaseHelper = DatabaseHelper()
+    
+    //to retrieve data from the core data
+    override func viewWillAppear(_ animated: Bool) {
+        
+        notes = databaseHelper.getAllNotes()
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,15 +42,31 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        // number of rows according to the length of notes
+        return notes.count
     }
 
-    
+    //retrieving data for each cell in a table view
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteRow", for: indexPath)
+        
         // Configure the cell...
+        
+        var content = cell.defaultContentConfiguration()
+        
+        let row = indexPath.row
+        
+        let note = notes[row]
+        content.text = note.title
+        
+        //format to string from date of timestamp from core data
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        let timestampString = formatter.string(from: note.timestamp!)
+                
+        content.secondaryText = timestampString
+        cell.contentConfiguration = content
 
         return cell
     }
