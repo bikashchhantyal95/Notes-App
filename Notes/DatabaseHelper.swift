@@ -34,8 +34,16 @@ class DatabaseHelper{
     //retrieve all the notes from core data
     func getAllNotes()-> [NotesEntity]{
         var notes: [NotesEntity] = []
+        
+        let fetchRequest: NSFetchRequest<NotesEntity> = NotesEntity.fetchRequest()
+            
+            // Sort the fetch request by title in ascending order
+            let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+            fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        
         do{
-            notes = try context.fetch(NotesEntity.fetchRequest()) //retrieves all the data from the core data
+            notes = try context.fetch(fetchRequest) //retrieves all the data from the core data
         }catch{
             print(error) //catches an error incase of exceptions
         }
