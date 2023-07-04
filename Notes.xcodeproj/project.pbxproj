@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5075C13A2A539192007DE914 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075C1392A539192007DE914 /* NotesTableViewController.swift */; };
+		5075C13E2A5396C5007DE914 /* NoteCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075C13D2A5396C5007DE914 /* NoteCreateVC.swift */; };
 		DB26B28D2A40A43800946257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B28C2A40A43800946257 /* AppDelegate.swift */; };
 		DB26B28F2A40A43800946257 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B28E2A40A43800946257 /* SceneDelegate.swift */; };
 		DB26B2912A40A43800946257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB26B2902A40A43800946257 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5075C1392A539192007DE914 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		5075C13D2A5396C5007DE914 /* NoteCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreateVC.swift; sourceTree = "<group>"; };
 		DB26B2892A40A43800946257 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB26B28C2A40A43800946257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB26B28E2A40A43800946257 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				DB26B29D2A40A43900946257 /* Info.plist */,
 				DB26B2952A40A43800946257 /* Notes.xcdatamodeld */,
 				5075C1392A539192007DE914 /* NotesTableViewController.swift */,
+				5075C13D2A5396C5007DE914 /* NoteCreateVC.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				DB26B2912A40A43800946257 /* ViewController.swift in Sources */,
 				DB26B28D2A40A43800946257 /* AppDelegate.swift in Sources */,
+				5075C13E2A5396C5007DE914 /* NoteCreateVC.swift in Sources */,
 				DB26B28F2A40A43800946257 /* SceneDelegate.swift in Sources */,
 				DB26B2972A40A43800946257 /* Notes.xcdatamodeld in Sources */,
 				5075C13A2A539192007DE914 /* NotesTableViewController.swift in Sources */,
@@ -295,7 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 826F4CUPXU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 826F4CUPXU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
