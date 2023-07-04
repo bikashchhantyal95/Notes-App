@@ -107,14 +107,29 @@ class NotesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        switch segue.identifier{
+                case "details":
+                    let destinationView = segue.destination as! NoteDetailsViewController
+                    let currentRow = tableView.indexPathForSelectedRow!
+                    let index = currentRow.row
+            destinationView.note = Note(title: notes[index].title!, content: notes[index].description, timestamp: notes[index].timestamp!)
+                
+                case "Add":
+                    let destinationView = segue.destination as! NoteCreateVC
+                    
+                    
+                default:
+                 preconditionFailure("Failure of indentify segue.")
+                }
     }
-    */
+    
 
 }
