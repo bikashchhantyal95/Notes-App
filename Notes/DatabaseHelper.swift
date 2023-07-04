@@ -32,17 +32,19 @@ class DatabaseHelper{
     }
     
     //retrieve all the notes from core data
-    func getAllNotes(){
+    func getAllNotes()-> [NotesEntity]{
         var notes: [NotesEntity] = []
         do{
             notes = try context.fetch(NotesEntity.fetchRequest()) //retrieves all the data from the core data
         }catch{
             print(error) //catches an error incase of exceptions
         }
+        
+        return notes
     }
 }
 
-//a model class to access the entity class attributes
+//a model class to easily pass arguements to the core data
 struct Note{
     let title: String
     let content: String
